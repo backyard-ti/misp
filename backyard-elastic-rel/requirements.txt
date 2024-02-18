@@ -1,0 +1,4 @@
+Flask>=2.1
+Werkzeug>=2.0
+pymisp>=2.4.183
+

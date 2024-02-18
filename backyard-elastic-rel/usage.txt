@@ -1,0 +1,18 @@
+You will want to export the misp server details before running the flask script:
+
+export MISP_URL='https://'
+export MISP_KEY=''
+export MISP_VERIFYCERT='False'
+
+Then python3 misp_flask_app.py
+
+
+The logstash conf file in in the logstash directory. Generally this file is placed in /etc/logstash/conf.d.
+
+You can change test-tage in the conf file to retrieve events with specific tags in the misp server:
+
+http://127.0.0.1:5001/misp/events/test-tag  
+
+To test you can do curl http://127.0.0.1:5001/misp/<tag name>
+
+Right now this setup does not scale for large scale event indexing. 
